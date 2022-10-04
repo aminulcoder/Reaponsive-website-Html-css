@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Montserrat;
 }
-nav{
+
+nav {
     display: flex;
     width: 100%;
     height: 80px;
@@ -17,54 +19,61 @@ nav{
     justify-content: space-between;
     padding: 0px 50px 0 80px;
     align-items: center;
-    
+
 }
-.logo{
+
+.logo {
     font-size: 25px;
     color: white;
     font-weight: bold;
 }
-nav ul{
+
+nav ul {
     display: flex;
-   
+
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     margin: 0 8px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
-    color:#fff ;
+    color: #fff;
     padding: 7px 13px;
     border-radius: 3px;
     transition: 0.5s;
     text-transform: uppercase;
 }
-nav ul li a:hover ,nav ul li a.active{
+
+nav ul li a:hover,
+nav ul li a.active {
     background-color: #566573;
-   
+
 }
-.menu-btn{
+
+.menu-btn {
     color: #fff;
     font-size: 22px;
     cursor: pointer;
     display: none;
 }
-#click{
+
+#click {
     display: none;
 }
 
 /* Responsive work start */
 
 @media only screen and (max-width:940px) {
-    .menu-btn{
+    .menu-btn {
         display: block;
     }
-    nav ul{
+
+    nav ul {
         position: fixed;
         background-color: #17202A;
         top: 80px;
@@ -74,32 +83,35 @@ nav ul li a:hover ,nav ul li a.active{
         flex-direction: column;
         text-align: center;
         left: -100%;
-        transition:all 0.5s ease;
-    }
-    #click:checked ~ .menu-btn i::before{
-        content: "\f00d";
-    }
-    #click:checked ~ ul{
-        left: 0%;
-       
+        transition: all 0.5s ease;
     }
 
-    nav ul li{
+    #click:checked~.menu-btn i::before {
+        content: "\f00d";
+    }
+
+    #click:checked~ul {
+        left: 0%;
+
+    }
+
+    nav ul li {
         margin: 50px 0;
     }
 
-    nav ul li a{
+    nav ul li a {
         font-size: 22px;
     }
 
-    nav ul li a:hover , nav ul li a.active{
+    nav ul li a:hover,
+    nav ul li a.active {
         background: none;
         color: red;
     }
-    
+
 }
 
-header{
+header {
     background-image: url('/images/00-best-backgrounds-and-wallpaper-apps-for-android.jpg');
     height: 90vh;
     background-repeat: no-repeat;
@@ -107,16 +119,18 @@ header{
     background-position: center center;
 }
 
-.services-title{
+.services-title {
     text-align: center;
     color: white;
     padding: 50px 0;
     letter-spacing: 0.2em;
 }
-#service-section{
+
+#service-section {
     background-color: #16213E;
 }
-.service-parent{
+
+.service-parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* border: 2px solid red; */
@@ -125,7 +139,8 @@ header{
     margin: 0 auto;
     padding-bottom: 100px;
 }
-.single-service{
+
+.single-service {
     background-color: white;
     text-align: center;
     color: black;
@@ -133,34 +148,109 @@ header{
     border-radius: 5px;
     border: 3px solid green;
     box-shadow: 5px 5px 10px gray;
-    
+
 }
-.single-service i{
+
+.single-service i {
     font-size: 40px;
 }
-.single-service h2{
+
+.single-service h2 {
     margin: 10px 0;
     font-weight: bold;
 }
 
+#second-section {
+    background-color: #1b4f72;
+    padding: 50px 0 100px 0;
+}
+
+.smart-text-area {
+    text-align: center;
+    font-size: 35px;
+    color: yellow;
+    margin-bottom: 50px;
+    letter-spacing: 0.2em;
+}
+
+.smart-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+.smart-text {
+    color: white;
+}
+
+.smart-text h2 {
+    margin: 20px 0;
+    font-size: 30px;
+    width: 100%;
+}
+
+.smart-text a {
+    text-decoration: none;
+    font-size: 22px;
+    background-color: bisque;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.smart-image {
+    width: 100%;
+}
+
+.smart-image img {
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+
 
 /* services section responsive area start */
-@media only screen and (max-width:688px)
-{
-    .service-parent{
+@media only screen and (max-width:688px) {
+    .service-parent {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 10px;
         width: 100%;
     }
+
+    .smart-parent {
+        display: block;
+        margin: 0 30px;
+
+    }
+
+    .smart-image img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+
 }
 
-@media only screen and (min-width:689px) and (max-width: 1099px){
-    .service-parent{
+@media only screen and (min-width:689px) and (max-width: 1099px) {
+    .service-parent {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
         width: 100%;
     }
 
+    .smart-parent {
+        display: block;
+        margin: 0 70px;
+    }
+
+    .smart-image img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
 }
